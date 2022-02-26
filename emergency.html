@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="index.js"></script>
+    <script defer src="emergency.js"></script>
 </head>
 
 <body>
-    <select id="langselector" onchange="loadlang()">
-        <option value="en">English</option>
-        <option value="de">Deutsch</option>
+    <select id="countryselector" onchange="get_emergency_numbers()">
       </select>
     <div id="emergeny_title" class="title"></div>
     <div class="button-column">
-        <a id="medical" href="dummy.html" class="button"></a>
-        <a id="fire" href="dummy.html" class="button"></a>
+        <div id="Emergency"></div>
+        <div id="Ambulance"></div>
+        <div id="Fire"></div>
+        <div id="Police"></div>
     </div>
 </body>
 
