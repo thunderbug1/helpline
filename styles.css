@@ -1,6 +1,7 @@
 body {
     background-color: lightgray;
     font-family: "Verdana";
+    justify-self: stretch;
 }
 
 .title {
@@ -11,9 +12,10 @@ body {
 
 .button-column {
     display: grid;
+    justify-content: stretch;
     align-items: center;
     gap: 0.5em;
-    justify-self: stretch;
+    width: 100%;
 }
 
 .button-grid {
@@ -36,7 +38,7 @@ body {
     background-color: #EEEEEE;
     color: #333333;
     box-sizing: border-box;
-    max-width: 60em;
+    max-width: 80em;
     max-height: 40em;
     min-height: 10em;
 }
