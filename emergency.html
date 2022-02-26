@@ -13,11 +13,35 @@
     <select id="countryselector" onchange="get_emergency_numbers()">
       </select>
     <div id="emergeny_title" class="title"></div>
-    <div class="button-column">
-        <div id="Emergency"></div>
-        <div id="Ambulance"></div>
-        <div id="Fire"></div>
-        <div id="Police"></div>
+    <div class="button-grid">
+        <a id="emergency-button" class="button">
+            <div>
+                <div class="emergency-name">Emergency</div>
+                <div id="Emergency" class="emergency-number"></div>
+            </div>
+            <div id="emergency-overlay" class="overlay"></div>
+        </a>
+        <a id="ambulance-button" class="button">
+            <div>
+                <div class="emergency-name">Ambulance</div>
+                <div id="Ambulance" class="emergency-number"></div>
+            </div>
+            <div id="ambulance-overlay" class="overlay"></div>
+        </a>
+        <a id="fire-button" class="button">
+            <div>
+                <div class="emergency-name">Fire</div>
+                <div id="Fire" class="emergency-number"></div>
+            </div>
+            <div id="fire-overlay" class="overlay"></div>
+        </a>
+        <a id="police-button" class="button">
+            <div>
+                <div class="emergency-name">Police</div>
+                <div id="Police" class="emergency-number"></div>
+            </div>
+            <div id="police-overlay" class="overlay"></div>
+        </a>
     </div>
 </body>
 

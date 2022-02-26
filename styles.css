@@ -1,5 +1,6 @@
 body {
     background-color: lightgray;
+    font-family: "Verdana";
 }
 
 .title {
@@ -9,21 +10,61 @@ body {
 }
 
 .button-column {
-    display: flex;
+    display: grid;
     align-items: center;
-    flex-direction: column;
-    padding: 10px;
+    gap: 0.5em;
+    justify-self: stretch;
+}
+
+.button-grid {
+    display: grid;
+    /*grid-template-columns: 1fr 1fr;*/
+    align-items: center;
+    gap: 0.5em;
+    justify-self: stretch;
 }
 
 .button {
-    font: bold 11px Arial;
+    display: flex;
+    position: relative;
+    font: bold 18px Arial;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
     background-color: #EEEEEE;
     color: #333333;
-    padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-left: 1px solid #CCCCCC;
     box-sizing: border-box;
+    max-width: 60em;
+    max-height: 40em;
+    min-height: 10em;
+}
+
+.emergency-name {
+    text-align: center;
+}
+
+.emergency-number {
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    /*display: none;*/
+    /* Hidden by default */
     width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: -1;
+    /* Specify a stack order in case you're using a different order for other elements */
+    color: darkgray;
+    pointer-events: none;
 }

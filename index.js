@@ -9,7 +9,8 @@ var languages = {
         fire: "Fire",
         food_and_water: "Food and Water",
         shelter: "Shelter",
-        mental_health: "Mental health"
+        mental_health: "Mental health",
+        doctor: "Physical health"
     },
 
     de: {
@@ -22,7 +23,8 @@ var languages = {
         fire: "Feuer",
         food_and_water: "Essen und Wasser",
         shelter: "Unterkunft",
-        mental_health: "Psychologisch"
+        mental_health: "Psychologische Gesundheit",
+        doctor: "Physische Gesundheit"
     }
 }
 
