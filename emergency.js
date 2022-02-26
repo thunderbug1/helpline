@@ -252,23 +252,6 @@ function getFlags($code) {
     return '🏳';
 }
 
-/* Initialise Reverse Geocode API Client */
-var reverseGeocoder = new BDCReverseGeocode();
-
-/* Get the current user's location information, based on the coordinates provided by their browser */
-/* Fetching coordinates requires the user to be accessing your page over HTTPS and to allow the location prompt. */
-reverseGeocoder.getClientLocation(function(result) {
-    console.log(result);
-    let country_unicode_code = getFlags(result.countryCode);
-
-    for (var option of document.getElementById("countryselector").options) {
-        if (option.value === country_unicode_code) {
-            option.selected = true;
-            return;
-        }
-    }
-});
-
 let dropdown = document.getElementById("countryselector");
 
 let emergency_number_data = null;
@@ -341,6 +324,23 @@ function get_emergency_numbers() {
     }
 }
 
+/* Initialise Reverse Geocode API Client */
+var reverseGeocoder = new BDCReverseGeocode();
+
+/* Get the current user's location information, based on the coordinates provided by their browser */
+/* Fetching coordinates requires the user to be accessing your page over HTTPS and to allow the location prompt. */
+reverseGeocoder.getClientLocation(function(result) {
+    //console.log(result);
+    let country_unicode_code = getFlags(result.countryCode);
+
+    for (var option of document.getElementById("countryselector").options) {
+        if (option.value === country_unicode_code) {
+            option.selected = true;
+            break;
+        }
+    }
+    get_emergency_numbers()
+});
 
 /*async function load_content() {
     let url = "http://dbpedia.org/sparql";
